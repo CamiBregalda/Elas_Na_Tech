@@ -1,71 +1,172 @@
 <!Doctype html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="style.css" />
-        <title>Meu currículo</title>
+    <head>        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Currículo</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     </head>
-    <body style="background-color: rgb(235, 225, 213);">
-        <h1 style="text-align:center; font-size: 25px; font-family: tahoma, sans-serif, Arial; margin-bottom: 3px;"><b>CAMILA BREGALDA</b></h1>
 
-        <div class="cabecalho">
-            <p>Dois Vizinhos - PR<br>
-            Telefone: +55 (54) 99626-9116<br>
-            Email: <a href="mailto:camilazbregalda@gmail.com?subject=Assunto" >camilazbregalda@gmail.com</a><br>
-            LinkedIn: <a href="https://www.linkedin.com/in/camila-bregalda/">https://www.linkedin.com/in/camila-bregalda/</a><br>
-            GitHub: <a href="https://github.com/CamiBregalda">https://github.com/CamiBregalda</a></p>
-        </div>
+    <body>
+        <div class="container">
+        <!-- Lado Esquerdo do currículo. -->
 
-        <hr style="margin-left: 30px; margin-right: 40px;">
-
-        <h2 style="text-align:justify; font-size: 18px; font-family: tahoma, sans-serif, Arial; margin-left: 30px; margin-right: 40px;"><b>OBJETIVO: Atuar na Área de Desenvolvimento de Sistemas</b></h2>
-        
-        <div class="corpo">    
-            <h3><b>QUALIFICAÇÕES E HABILIDADES</b></h3>
-            <p style="text-indent: 50px">Profissional formada como Técnica em Informática pelo Instituto Federal Farroupilha e, 
-            atualmente, está cursando o segundo semestre de Engenharia de Software na Universidade Tecnológica Federal do Paraná. 
-            No momento, está se especializando na linguagem de programação Java conjuntamente com o framework Spring Boot. Possui 
-            conhecimento prévio nas linguagens de programação C, Python e PHP, conjuntamente com HTML e CSS. Ademais, já tem experiência 
-            com banco de dados SQL, sistemas de versionamento e metodologias ágeis, como Scrum e Kanban. Demonstra facilidade para 
-            desenvolvimento de códigos e contribuir na resolução de problemas, tendo um bom domínio de lógica de programação, além de 
-            ser uma pessoa responsável, proativa, que presta atenção aos detalhes e é focada em alcançar bons resultados. Ademais, tem boas 
-            habilidades de comunicação e sabe trabalhar em equipe.</p>
-
-            <hr>
-
-            <h3><b>FORMAÇÃO ACADÊMICA</b></h3>
-            <li><b>Técnico em Informática Integrado ao Ensino Médio – </b>Instituto Federal Farroupilha – Dezembro/2022</li>
-            <li><b>Bacharelado em Engenharia de Software – </b>Universidade Tecnológica Federal do Paraná – Cursando</li>
+            <!-- Abre div lado esquerdo. -->
+            <div class="lado_Esquerdo">
+                <div class="textoPerfil">
+                    <div class="imgBox">
+                        <img src="img/Camila Bregalda.jpg" width="300" height="280">
+                    </div>
+                    <h2>Camila Bregalda<br>
+                    <span>DESENVOLVEDORA BACK-END</span></h2>
+                </div>
             
-            <hr>
+                <!-- Parte de contato. -->
 
-            <h3><b>EXPERIÊNCIA PROFISSIONAL E VOLUNTÁRIA</b></h3>
-            <p><b>Digital Bit Informática – </b>Janeiro/2022 a Fevereiro/2022<br>
-            Cargo: Estagiário
-            Atuação como estagiário na manutenção preventiva e corretiva de hardware e software.
-            <li>Análise e resolução de problemas;</li>
-            <li>Manutenção preventiva e corretiva de Hardware e Software;</li>
-            <li>Formatação e instalações de SO.</li>
+                <div class="infoContato">
+                    <h3 class="titulo">Contato</h3>
+                    <ul>
+                        <span class="icon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                        <span class="texto">+55 54 99626-9116</span>
+                        <br>
+                        <span class="icon"><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                        <span class="texto"><a href="mailto:camilazbregalda@gmail.com?subject=Assunto" style="text-decoration: none"><font color=white>camilazbregalda@gmail.com</a></font></span>
+                        <br>
+                        <span class="icon"><i class="fa fa-linkedin" aria-hidden="true"></i></span>
+                        <span class="texto"><a href="https://www.linkedin.com/in/camila-bregalda/" style="text-decoration: none"><font color=white>linkedin.com/in/camila-bregalda</a></font></span>
+                        <br>
+                        <span class="icon"><i class="fa fa-github" aria-hidden="true"></i></span>
+                        <span class="texto"><a href="https://github.com/CamiBregalda" style="text-decoration: none"><font color=white>github.com/CamiBregalda</a></font></span>
+                    </ul>
+                </div>
+
+                <!-- Fim da parte de contato. -->
+
+                <br><br>
+
+                <!-- Parte de educação. -->
+
+                <div class="infoContato formacao">
+                    <h3 class="titulo">Formação acadêmica:</h3>
+                    <ul>
+                        <li>
+                            <h5>2020-2022</h5>
+                            <h4>TÉCNICO EM INFORMÁTICA</h4>
+                            <h4>IFFAR – Instituto Federal Farroupilha - Campus Santo Augusto</h4>
+                        </li>
+                        <li>
+                            <h5>2023-2026</h5>
+                            <h4>ENGENHARIA DE SOFTWARE</h4>
+                            <h4>UTFPR – Universidade Tecnológica Federal do Paraná</h4>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Fim da parte de educação.  -->
+                
+                <br>
+
+                <!-- Parte de linguagem. -->
+
+                <div class="infoContato linguagem">
+                    <h3 class="titulo">Idiomas:</h3>
+                    <ul>
+                        <li>
+                            <span class="texto">Inglês - Básico</span>
+                            <span class="porcentagem">
+                                <div style="width: 25%;"></div>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="texto">Português</span>
+                            <span class="porcentagem">
+                                <div style="width: 100%;"></div>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div> <!-- Fecha div lado esquerdo. -->
+
+            <!-- Fim da parte de linguagem. -->
+
+            <!-- Fim do lado esquerdo. -->
+
+        
+            <!-- Lado direito do currículo. -->
+
+            <!-- Abre div lado direito. -->
+            <div class="lado_Direito"> 
+                <div class="about">
+                    <h2 class="titulo2">SOBRE MIM</h2>
+                    <p style="text-align: justify;">
+                        No momento, estou me especializando na linguagem de programação <strong>Java</strong> conjuntamente com o framework <strong>Spring Boot</strong>. 
+                        Possuo conhecimento prévio nas linguagens de programação <strong>C</strong>, <strong>Python</strong> e <strong>PHP</strong>, conjuntamente com 
+                        <strong>HTML</strong> e <strong>CSS</strong>. Ademais, já disponho de experiência com banco de dados <strong>SQL</strong>, sistemas de versionamento e 
+                        metodologias ágeis, como <strong>Scrum</strong> e <strong>Kanban</strong>. Outrossim, tenho facilidade para o desenvolvimento de códigos e na 
+                        resolução de problemas, tendo um bom domínio de lógica de programação, além de ser uma pessoa responsável, proativa, detalhista e é focada em 
+                        alcançar bons resultados. Ademais, possuo boas habilidades de comunicação e sei trabalhar em equipe.
+                    </p>
+                </div>
+                <div class="about">
+                    <div class="exp-prof">
+                        <h2 class="titulo2">EXPERIÊNCIA PROFISSIONAL E VOLUNTÁRIA</h2>
+                        <img src="./img/DigitalBit.png" alt="Imagem" width="50" height="50">
+                        <div class="texto">
+                            <h3>Estagiária</h3>
+                            <p>Digital Bit Informática · Meio período</p>
+                            <p>Período: janeiro de 2022 - fevereiro de 2022</p>
+                            <p>Paraí, Rio Grande do Sul, Brasil</p><br>
+                        </div>
+                    </div>
+                        <div class="texto">
+                            <li>Análise e resolução de problemas;</li>
+                            <li>Manutenção preventiva e corretiva de Hardware e Software;</li>
+                            <li>Formatação e instalações de SO.</li>
+                        </div>
+                </div>
+                <div class="about habilidades">
+                    <h2 class="titulo2">FORMAÇÃO COMPLEMENTAR</h2>
+                    <li><b>Lógica de Programação – </b>Instituto Federal Sul-Rio-Grandense – Janeiro/2023</li>
+                    <li><b>Fundamentos da Programação – </b>Instituto Federal Sul-Rio-Grandense – Maio/2023</li>
+                    <li><b>Programação Básica com Java I – </b>Instituto Federal do Rio Grande do Sul – Maio/2023</li>
+                    <li><b>Programação Básica com Java II – </b>Instituto Federal do Rio Grande do Sul – Maio/2023</li>
+                    <li><b>Java Completo – </b>Udemy – Cursando</li>
+                    <li><b>Santander Coders 2023 – </b>Ada Tech – Cursando</li>
+                    <li><b>ElasNaTech 2023 – </b>JA Brasil – Cursando</li> <br>
+
+                    <h2 class="titulo2">CONHECIMENTO DE FERRAMENTAS</h2>
+
+                    <li><b>LINGUAGENS DE PROGRAMAÇÃO:</b></li>
+                    <li style="text-indent: 50px">Java</li>
+                    <li style="text-indent: 50px">Python</li>
+                    <li style="text-indent: 50px">C</li>
+                    <li style="text-indent: 50px">PHP</li><br>
+
+                    <li><b>FRAMEWORKS:</b></li>
+                    <li style="text-indent: 50px">Bootstrap</li>
+                    <li style="text-indent: 50px">Spring Boot</li><br>
+
+                    <li><b>OUTROS:</b></li>
+                    <li style="text-indent: 50px">Metodologias ágeis</li>
+                    <li style="text-indent: 50px">Banco de dados relacionais (SQL)</li>
+                    <li style="text-indent: 50px">Sistemas de Gerenciamento de Versão (GIT)</li><br>
+                </div>
+                
+            </div>
+            <!-- Fecha div lado direito. -->
+    
 
 
-            <hr>
-
-            <h3><b>FORMAÇÃO COMPLEMENTAR</b></h3>
-            <li><b>Lógica de Programação – </b>Instituto Federal Sul-Rio-Grandense – Janeiro/2023</li>
-            <li><b>Fundamentos da Programação – </b>Instituto Federal Sul-Rio-Grandense – Maio/2023</li>
-            <li><b>Programação Básica com Java I – </b>Instituto Federal do Rio Grande do Sul – Maio/2023</li>
-            <li><b>Programação Básica com Java II – </b>Instituto Federal do Rio Grande do Sul – Maio/2023</li>
-            <li><b>Java Completo – </b>Udemy – Cursando</li>
-            <li><b>Santander Coders 2023 – </b>Ada Tech – Cursando</li>
-            <li><b>ElasNaTech 2023 – </b>JA Brasil – Cursando</li>
-            <p><b>Conhecimento de ferramentas:</b></p>
-            <li style="text-indent: 50px">Framework Bootstrap</li>
-            <li style="text-indent: 50px">Framework Spring Boot</li>
-            <li style="text-indent: 50px">Metodologias ágeis</li>
-            <li style="text-indent: 50px">Banco de dados relacionais (SQL)</li>
-            <li style="text-indent: 50px">Sistemas de Gerenciamento de Versão (GIT)</li>
+            <!-- Inicia a div do rodapé. -->
+            <div class="rodape">
+                <h4>&copy Camila Bregalda</h4>
+            </div>
+            <!-- Fecha a div do rodapé. -->
+    
+        <!-- Fecha a div do container. -->
         </div>
-
-        <h5 style="text-align: center; padding: 9px 0px; margin: 0px;">&copy Camila Bregalda</h5>
 
     </body>
     </html>
