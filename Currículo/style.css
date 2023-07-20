@@ -1,13 +1,272 @@
-.cabecalho{
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;}
+
+body{
+    background: rgb(176, 175, 175);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 1100px;
+    min-height: 1000px;
+    background: #fff;
+    margin: 50px;
+    margin-bottom: 70px;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+}
+
+/* Começo do style da parte esquerda. */
+
+.container .lado_Esquerdo{
+    position: relative;
+    background: #003147;
+    padding: 40px;
+}
+
+.textoPerfil{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.textoPerfil .imgBox{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius:50%;
+    overflow: hidden;
+}
+
+.textoPerfil .imgBox img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.textoPerfil h2{
+    color: #fff;font-size: 1.5em;
+    margin-top:20px;
+    text-transform: uppercase;
     text-align: center;
-    font-family: tahoma, sans-serif, Arial;
+    font-weight: 500;
+    line-height: 1.8em;
+}
+
+.textoPerfil h2 span{
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.infoContato {
+    padding-top: 40px;
+}
+
+.titulo{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+}
+
+.infoContato ul{
+    position: relative; 
+}
+
+.infoContato ul li{ 
+    position: relative;
+    list-style: none;
+    margin: 10px 0;
+    cursor: pointer;
+}
+
+.infoContato ul .icon{ 
+    display: inline-block;
+    width: 30px;
+    font-size: 18px;
+    color: #03a9f4;
+}
+
+.infoContato ul span{ 
+    color: #fff;
+    font-weight: 300;
+}
+
+.infoContato.formacao li{
+    margin-bottom:15px;
+}
+
+.infoContato.formacao h5{
+    color: #03a9f4;
+    font-weight: 500;
+}
+
+.infoContato.formacao h4:nth-child(2){
+    color: #fff;
+    font-weight: 500;
+}
+
+.infoContato.formacao h4{
+    color: #fff;
+    font-weight: 300;
+}
+
+.infoContato.linguagem .porcentagem{
+    position: relative;
+    width: 100%;
+    height: 6px;
+    background: #081921;
+    display: block;
+    margin-top: 5px;
+}
+
+.infoContato.linguagem .porcentagem div{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background: #03a9f4;
+}
+
+/* Fim do style da parte esquerda. */
+
+/* Começo do style da parte direita. */
+
+.container .lado_Direito{
+    position: relative;
+    background: #fff;
+    padding: 40px;
+}
+
+.about{
+    margin-bottom: 50px;
+}
+
+.about:last-child{
+    margin-bottom: 0;
+}
+
+.titulo2{
+    color: #003147;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+p{
+    color: #333;
+    font-size: 17px;
+    line-height: 1.5rem;
+}
+.exp-prof {
+    width: 100%;
+    overflow: hidden;
+    /* Limpa o float */
+}
+
+img {
+    float: left;
+    /* Posiciona a imagem à esquerda */
+    margin-right: 10px;
+    /* Adapte a margem conforme necessário */
+    margin-top: 15px;
+    width: 60px;
+    border-radius: 50px;
+}
+
+.texto {
+    overflow: hidden;
+    /* Limpa o float */
+}
+
+h3,
+p {
+    margin: 0;
+    /* Remove as margens padrão */
+}
+.texto p span{
+    text-transform: uppercase;
+    /* color: #03a9f4; */
+    font-weight: 500;
     font-size: 13px;
 }
 
-.corpo{
-    text-align: justify;
-    font-family: tahoma, sans-serif, Arial;
-    margin-left: 30px;
-    margin-right: 40px;
-    font-size: 14px;
+.about .box{
+    display: flex;
+    flex-direction: row;
+    margin: 20px 0;
 }
+
+.about .box .tempo{
+    min-width: 150px;
+}
+
+.about .box .tempo h5{
+    text-transform: uppercase;
+    color: #848c90;
+    font-weight: 600;
+}
+
+.about .box .texto h4{
+    text-transform: uppercase;
+    color: #003147;
+    font-size: 16px;
+}
+
+.about .box .texto span{
+    text-transform: uppercase;
+    color: #03a9f4;
+    /* font-size: 16px; */
+}
+
+.habilidades .box{
+    position: relative;
+    width: 100%;
+    /* display: grid; */
+    /* grid-template-columns: 150px 1fr; */
+    /* justify-content:center; */
+    /* align-items:center; */
+}
+
+.habilidades .box p span{
+    text-transform: uppercase;
+    color: #03a9f4;
+    font-weight: 500;
+}
+
+/* Fim do style da parte direita. */
+
+
+
+/* Início do style do rodapé */
+
+.rodape {
+    position: absolute;
+    bottom: -25px;
+    line-height: 35px;
+    width: 100%;
+    background: #000000;
+    color: #afb0bd;
+    box-shadow: 0 35px 55px rgba(0, 0, 0, 0.1);
+    text-align: center; 
+    padding: 9px 0px; 
+    margin: 0px;
+}
+
+/* Fim do style do rodapé */
