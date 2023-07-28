@@ -1,0 +1,255 @@
+<!Doctype html>
+<html>
+    <head>        
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cardápio</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <link rel="stylesheet" type="text/css" href="styleCarousel.css"/>
+        <link href="grid/simple-grid.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="logo">
+                <a href="index.html"><img src="img/logo.png" alt="hamburger menu" style="width: 200px;"></a>
+            </div>
+            <div class="nav-bar">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">PÁGINA INICIAL</a></li>
+                        <li><a href="index.html#home">SOBRE</a></li>
+                        <li><div class="dropdown">
+                            <a href="index.html#menu" class="dropbtn">MENU</a>
+                            <div class="dropdown-content">
+                                <a href="hamburguer.html">HAMBURGUERES</a>
+                                <a href="petiscos.html">PETISCOS</a>
+                                <a href="bebida.html">BEBIDAS</a>
+                            </div>
+                        </div></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main>
+            <div id="paginaInicial">
+                <h2>NOVIDADES</h2>
+            </div>
+
+            <!--Início do carrosel de slides-->
+            <div class="carousel-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="img/Hamburguer Simples.jpg" style="width:100%">
+                    <div class="text">Hambúrguer Simples</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="img/Hamburguer Bacon.jpg" style="width:100%">
+                    <div class="text">Bomba de Bacon</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="img/Hamburguer Cheddar.jpg" style="width:100%">
+                    <div class="text">The Crazy Cheddar</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+
+            <br>
+
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span> 
+                <span class="dot" onclick="currentSlide(2)"></span> 
+                <span class="dot" onclick="currentSlide(3)"></span> 
+            </div>
+
+            <!-- Parte de JavaScript -->
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+                
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+                    
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+                    
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {slideIndex = 1}    
+                    if (n < 1) {slideIndex = slides.length}
+                    
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";  
+                    }
+                    
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+            
+                    slides[slideIndex-1].style.display = "block";  
+                    dots[slideIndex-1].className += " active";
+                }
+            </script>
+
+            <div id="home">
+                <h2>SOBRE</h2>
+                <p style="text-indent: 5%;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                <p style="text-indent: 5%;">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+
+            <section id="menu">
+                <h2>MENU</h2>
+                <div class="row" style="align-items: start;">  
+                    <a href="hamburguer.html">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="menu">
+                                <div class="header-menu">
+                                    <div class="header-menu-inner">
+                                        <h6 class="text-uppercase font-weight-bold font-logo">Hamburguer</h6>
+                                    </div>
+                                    <img class="img-fluid" src="img/cardapio/hamburgueres/Bomba de Bacon.png" alt="" width="370" height="367">
+                                </div>
+                                <ul class="menu-content">
+                                    <li>
+                                        <p style="color: #fff; text-align: center; padding-top: 2px">Hamburguer Simples R$22,00</p>
+                                        <p>Pão brioche, maionese, alface, tomate, burguer, queijo mussarela, picles</p>
+                                    </li>
+                                    <li>
+                                        <p style="color: #fff; text-align: center; padding-top: 2px">The Crazy Cheddar R$24,00</p>
+                                        <p>Pão brioche, maionese, alface, tomate, burger, mussarela, cheddar, bacon, barbecue e picles</p>
+                                    </li>
+                                    <li>
+                                        <p style="color: #fff; text-align: center; padding-top: 2px">Bomba de Bacon R$25,00</p>
+                                        <p>Pão brioche, maionese, alface, tomate, burger, queijo mussarela, bacon pra caramba, picles, barbecue</p>
+                                    </li>
+                                    <li>
+                                        <p style="color: #fff; text-align: center; padding-top: 2px">Peppers R$28,00</p>
+                                        <p>Pão brioche, maionese, alface, tomate, burger, american cheese, bacon, cebola crispy, barbecue pepper e picles</p>
+                                    </li>
+                                    <li>
+                                        <p style="color: #fff; text-align: center; padding-top: 2px">Mega Burguer R$32,00</p>
+                                        <p>Pão brioche, maionese, alface, 2x burguer, 2x queijo mussarela, 2x cheddar, 2x bacon, tomate, picles</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="petiscos.html">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="menu">
+                                <div class="header-menu">
+                                    <div class="header-menu-inner">
+                                        <h6 class="text-uppercase font-weight-bold font-logo">Petiscos</h6>
+                                    </div>
+                                    <img class="img-fluid" src="img/cardapio/petiscos/Batata Frita.png" alt="" width="370" height="367">
+                                </div>
+                                <ul class="menu-content">
+                                    <li>
+                                        <p style="color: #fff; text-align: center; padding-top: 2px">Anéis de Cebola R$18,00</p>
+                                        <p>Ingredientes: Cebola, farinha de trigo, pimenta, maionese caseira</p>
+                                    </li>
+                                    <li>
+                                        <p style="color: #fff; text-align: center; padding-top: 2px">Fritas Simples R$22,00</p>
+                                        <p>Ingredientes: Palitos de batata, maionese caseira</p>
+                                    </li>
+                                    <li>
+                                        <p style="color: #fff; text-align: center; padding-top: 2px">Fritas com Cheddar e Bacon R$24,00</p>
+                                        <p>Ingredientes: Palitos de batata, cheddar, bacon, maionese caseira</p>
+                                    </li>
+                                    <li>
+                                        <p style="color: #fff; text-align: center; padding-top: 2px">Peixe Frito R$25,00</p>
+                                        <p>Opções de peixes disponíveis: Traíra, Pescada ou Tilápia</p>
+                                    </li>
+                                    <li>
+                                        <p style="color: #fff; text-align: center; padding-top: 2px">Nachos R$28,00</p>
+                                        <p>Doritos, pimenta chilli, molho mexicano ou guacamole</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>
+ 
+                    <a href="bebida.html">
+                        <div class="col-md-6 col-lg-4">
+                            <div class="menu">
+                                <div class="header-menu">
+                                    <div class="header-menu-inner">
+                                        <h6 class="text-uppercase font-weight-bold font-logo">Bebidas</h6>
+                                    </div>
+                                    <img class="img-fluid" src="img/cardapio/bebidas/Caipirinha.png" alt="" width="370" height="367">
+                                </div>
+                                <ul class="menu-content">
+                                    <li>
+                                        <p style="color: #fff; text-align: center; padding-top: 2px">Suco Natural R$8,00</p>
+                                        <p>Opções: laranja, uva, morango, abacaxi, limão, pitaya</p>
+                                    </li>
+                                    <li>
+                                        <p style="color: #fff; padding-top: 2px">Refrigerante R$10,00</p>
+                                        <p>Opções: coca-cola, fanta laranja, fanta uva, sprite, guaraná</p>
+                                    </li>
+                                    <li>
+                                        <p style="color: #fff; padding-top: 2px">Caipira de Limão R$15,00</p>
+                                        <p>Opções: morango, vinho, abacaxi, limão, laranja, pitaya, frutas</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </a>        
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="row" style="padding-bottom: 1%;">
+                <div class="col-4">
+                    <div class="infoContato">
+                        <address>
+                            <h4>CONTATOS</h4>
+                            <span class="icon"><i class="fa fa-phone" aria-hidden="true" style="color: whitesmoke;"></i></span>
+                            <span class="texto">+55 55 99999-9999</span><br>
+
+                            <span class="icon"><i class="fa fa-instagram" aria-hidden="true" style="color: whitesmoke;"></i></span>
+                            <span class="texto"><a href="#" style="text-decoration: none; color: white">@deliciuosBurguer</a></span><br>
+
+                            <span class="icon"><i class="fa fa-facebook" aria-hidden="true" style="color: whitesmoke;"></i></span>
+                            <span class="texto"><a href="#" style="text-decoration: none; color: white">Delicious Burguer</a></span>
+                        </address>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <address>
+                        <h4>ENDEREÇO</h4>
+                        <p>Rua Afonso Camargo, 000<br>Centro, Porto Alegre, RS</p>
+                    </address>
+                </div>
+                <div class="col-4">
+                    <div class="infoContato">
+                        <address>
+                            <h4>HORÁRIO DE FUNCIONAMENTO</h4>
+                            <p>Horário de atendimento:<br>Terça a Domingo, das 18:00 às 23:00.</p>
+                        </address>
+                    </div>
+                </div>
+            </div>
+            <div class="rodape">
+                <h4 style="color: whitesmoke;">&copy Camila Bregalda</h4>
+            </div>
+        </footer>
+
+    </body>
+</html>
