@@ -133,6 +133,10 @@ h2 {
   border-radius: 10px; 
 }
 
+.col-md-6.col-lg-4 p {
+  text-align: center;
+}
+
 .col-md-6.col-lg-4:hover {
   transform: scale(1.05);
 }
